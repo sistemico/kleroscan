@@ -1,0 +1,18 @@
+:root {
+  /* Layout */
+  --spacing-narrow: 0.5rem;
+  --spacing-normal: 1rem;
+  --spacing-wide: 2rem;
+
+  /* Palette */
+  --theme-color: #4004a3;
+  --backgroud-color: #f9f9f9;
+
+  --link-color: #3ecf8e;
+  --text-color: #151923;
+  --text-inverse-color: #ffffff;
+
+  /* Header */
+  --header-backgroud-color: #151923;
+  --header-text-color: #ffffff;
+}
