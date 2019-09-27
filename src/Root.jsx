@@ -101,10 +101,6 @@ const Content = styled.section`
   ${Container} {
     padding: var(--spacing-narrow) var(--spacing-normal);
   }
-
-  ${Branding} {
-    animation-duration: 2s;
-  }
 `
 
 const Header = styled.header`

@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import Branding from './Branding'
+
 const Overlay = styled.div`
   position: fixed;
   top: 0;
@@ -15,7 +17,7 @@ const Overlay = styled.div`
 
   touch-action: none;
 
-  background: var(--backgroud-color);
+  background: var(--overlay-backgroud-color);
 
   pointer-events: none;
 
@@ -23,13 +25,19 @@ const Overlay = styled.div`
   animation-duration: 250ms;
   animation-fill-mode: forwards;
 
+  ${Branding} {
+    width: 70px;
+    height: 70px;
+    animation-duration: 2s;
+  }
+
   @keyframes fade {
     from {
       opacity: 0;
     }
 
     to {
-      opacity: 0.8;
+      opacity: 1;
     }
   }
 `

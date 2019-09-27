@@ -16,4 +16,7 @@
   /* Header */
   --header-backgroud-color: #151923;
   --header-text-color: #ffffff;
+
+  /* Overlay */
+  --overlay-backgroud-color: #f8fcfa;
 }
