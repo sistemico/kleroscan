@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import Message from '../Message'
+import Pill from '../Pill'
 
 const CourtTable = ({ data: rootCourt }) => {
   const courts = useMemo(() => {
@@ -41,7 +42,7 @@ const CourtTable = ({ data: rootCourt }) => {
             <tr key={`court-${court.id}`}>
               <td>
                 <Link to={`/court/${court.id}`} title={`View details of ${court.name}`}>
-                  <span>{court.id}</span>
+                  <Pill>{court.id}</Pill>
                 </Link>
               </td>
               <td>

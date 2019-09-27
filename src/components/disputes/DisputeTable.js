@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import Message from '../Message'
+import Pill from '../Pill'
 import Period from '../formatters/Period'
 import Timestamp from '../formatters/Timestamp'
 
@@ -26,7 +27,7 @@ const DisputeTable = ({ data }) =>
           <tr key={`dispute-${dispute.id}`}>
             <td>
               <Link to={`/dispute/${dispute.id}`} title={`View details of dispute #${dispute.id}`}>
-                <span>{dispute.id}</span>
+                <Pill>{dispute.id}</Pill>
               </Link>
             </td>
             <td>
