@@ -56,6 +56,22 @@ const GlobalStylesheet = createGlobalStyle`
       td {
         text-align: center;
         border-top: 1px solid var(--border-color);
+        
+        &:first-child {
+          a {
+            display: inline-block;
+            min-width: 2rem;
+            padding: .1rem .2rem;
+            background: var(--border-color);
+            color: inherit;
+            border-radius: 25%;
+
+            &:hover {
+              text-decoration: none;
+              color: var(--link-color);
+            }
+          }
+        }
       }
     }
     
