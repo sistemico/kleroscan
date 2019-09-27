@@ -10,7 +10,8 @@ import GlobalStylesheet from './GlobalStylesheet'
 import Branding from './components/Branding'
 
 import HomePage from './pages/HomePage'
-import CourtPage from './pages/CourtPage'
+import CourtDetail from './pages/courts/CourtDetail'
+import CourtList from './pages/courts/CourtList'
 import DisputeDetail from './pages/disputes/DisputeDetail'
 import DisputeList from './pages/disputes/DisputeList'
 
@@ -40,7 +41,8 @@ const Root = () => (
           <Content>
             <Container>
               <Switch>
-                <Route path='/court/:courtId' component={CourtPage} />
+                <Route path='/courts' component={CourtList} />
+                <Route path='/court/:courtId' component={CourtDetail} />
                 <Route path='/disputes' component={DisputeList} />
                 <Route path='/dispute/:disputeId' component={DisputeDetail} />
                 <Route path='/' exact={true} component={HomePage} />
