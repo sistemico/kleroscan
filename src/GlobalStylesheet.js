@@ -43,6 +43,18 @@ const GlobalStylesheet = createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
     
+    th, td {
+      padding: var(--spacing-normal);
+      text-align: center;
+      
+      span {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    
     thead {
       font-size: 80%;
       text-transform: uppercase;
@@ -64,26 +76,21 @@ const GlobalStylesheet = createGlobalStyle`
             padding: .1rem .2rem;
             background: var(--border-color);
             color: inherit;
+            text-shadow: 1px 1px var(--text-inverse-color);
             border-radius: 25%;
 
             &:hover {
               text-decoration: none;
-              color: var(--link-color);
+              opacity: .5;
             }
           }
         }
       }
     }
     
-    th, td {
-      padding: var(--spacing-normal);
-      align-items: center;
-      
-      span {
-        display: block;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+    tfoot {
+      td {
+        font-weight: bold;
       }
     }
   }

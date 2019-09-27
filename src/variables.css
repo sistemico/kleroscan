@@ -6,10 +6,11 @@
 
   /* Palette */
   --theme-color: #4004a3;
-  --backgroud-color: #f9f9f9;
 
+  --backgroud-color: #f9f9f9;
   --border-color: #dee2e6;
-  --link-color: #3ecf8e;
+
+  --link-color: var(--text-color);
   --text-color: #151923;
   --text-inverse-color: #ffffff;
 
