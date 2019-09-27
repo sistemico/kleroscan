@@ -42,9 +42,10 @@ const Root = () => (
             <Container>
               <Switch>
                 <Route path='/courts' component={CourtList} />
-                <Route path='/court/:courtId' component={CourtDetail} />
+                {/*<Route path='/court/:courtId' component={CourtDetail} />*/}
                 <Route path='/disputes' component={DisputeList} />
-                <Route path='/dispute/:disputeId' component={DisputeDetail} />
+                {/*<Route path='/dispute/:disputeId' component={DisputeDetail} />*/}
+                <Route path='/jurors' component={JurorList} />
                 <Route path='/' exact={true} component={HomePage} />
                 <Redirect to='/' />
               </Switch>
