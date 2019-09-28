@@ -34,6 +34,8 @@ const HomePage = () => {
         <DisputeTable data={disputes} />
       </Section>
 
+      <br />
+
       <Section>
         <h2>Top Jurors by staked tokens</h2>
         <JurorTable data={jurors} />

@@ -19,7 +19,6 @@ const DisputeTable = ({ data }) =>
           <th>Choices</th>
           <th>Votes</th>
           <th>Status</th>
-          <th>Status Changed</th>
           <th>Created</th>
           <th>Last Modified</th>
         </tr>
@@ -50,9 +49,6 @@ const DisputeTable = ({ data }) =>
             </td>
             <td>
               <Period value={dispute.period} />
-            </td>
-            <td>
-              <Timestamp value={dispute.lastPeriodChange} addSuffix={true} />
             </td>
             <td>
               <Timestamp value={dispute.created} addSuffix={true} />
