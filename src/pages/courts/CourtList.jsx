@@ -29,7 +29,7 @@ const CourtList = () => {
 
   return (
     <>
-      <h2>All courts</h2>
+      <h2>All Courts</h2>
       <CourtTable data={rootCourt} />
     </>
   )

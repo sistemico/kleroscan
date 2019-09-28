@@ -15,6 +15,8 @@ import CourtList from './pages/courts/CourtList'
 // import DisputeDetail from './pages/disputes/DisputeDetail'
 import DisputeList from './pages/disputes/DisputeList'
 
+import JurorList from './pages/jurors/JurorList'
+
 const Root = () => (
   <ApolloProvider client={client}>
     <Router>
@@ -34,6 +36,9 @@ const Root = () => (
                 </Item>
                 <Item>
                   <Link to='/disputes'>Disputes</Link>
+                </Item>
+                <Item>
+                  <Link to='/jurors'>Jurors</Link>
                 </Item>
               </Menu>
             </Container>
