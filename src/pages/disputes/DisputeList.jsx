@@ -4,7 +4,8 @@ import { useSubscription } from '@apollo/react-hooks'
 
 import Overlay from '../../components/Overlay'
 import Branding from '../../components/Branding'
-import DisputeTable from '../../components/disputes/DisputeTable'
+
+import DisputeTable from './DisputeTable'
 
 import { ALL_DISPUTES_QUERY } from '../../queries/disputes'
 

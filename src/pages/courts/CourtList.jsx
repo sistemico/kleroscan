@@ -3,7 +3,8 @@ import { useSubscription } from '@apollo/react-hooks'
 
 import Overlay from '../../components/Overlay'
 import Branding from '../../components/Branding'
-import CourtTable from '../../components/courts/CourtTable'
+
+import CourtTable from './CourtTable'
 
 import { ALL_COURTS_QUERY } from '../../queries/courts'
 import Message from '../../components/Message'

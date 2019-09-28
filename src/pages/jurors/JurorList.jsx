@@ -4,7 +4,8 @@ import { useSubscription } from '@apollo/react-hooks'
 import Overlay from '../../components/Overlay'
 import Message from '../../components/Message'
 import Branding from '../../components/Branding'
-import JurorTable from '../../components/jurors/JurorTable'
+
+import JurorTable from './JurorTable'
 
 import { RECENT_JURORS_QUERY } from '../../queries/jurors'
 

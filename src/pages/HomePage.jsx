@@ -5,8 +5,9 @@ import styled from 'styled-components'
 import Branding from '../components/Branding'
 import Message from '../components/Message'
 import Overlay from '../components/Overlay'
-import DisputeTable from '../components/disputes/DisputeTable'
-import JurorTable from '../components/jurors/JurorTable'
+
+import DisputeTable from './disputes/DisputeTable'
+import JurorTable from './jurors/JurorTable'
 
 import { RECENT_DISPUTES_QUERY } from '../queries/disputes'
 import { TOP_STAKE_JURORS_QUERY } from '../queries/jurors'

@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import Message from '../Message'
-import Pill from '../Pill'
+import Message from '../../components/Message'
+import Pill from '../../components/Pill'
 
 const CourtTable = ({ data: rootCourt }) => {
   const courts = useMemo(() => {

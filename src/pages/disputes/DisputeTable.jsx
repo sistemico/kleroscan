@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
-import Message from '../Message'
-import Pill from '../Pill'
-import Period from '../formatters/Period'
-import Timestamp from '../formatters/Timestamp'
+import Message from '../../components/Message'
+import Pill from '../../components/Pill'
+import Period from '../../components/formatters/Period'
+import Timestamp from '../../components/formatters/Timestamp'
 
 const DisputeTable = ({ data }) =>
   !data || !data.length ? (

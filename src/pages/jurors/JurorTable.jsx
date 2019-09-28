@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
-import Message from '../Message'
-import Timestamp from '../formatters/Timestamp'
+import Message from '../../components/Message'
+import Timestamp from '../../components/formatters/Timestamp'
 
 const JurorTable = ({ data }) =>
   !data || !data.length ? (
