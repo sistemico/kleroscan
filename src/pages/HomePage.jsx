@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSubscription } from '@apollo/react-hooks'
+import { useQuery } from '@apollo/react-hooks'
 import styled from 'styled-components'
 
 import Branding from '../components/Branding'
@@ -13,8 +13,8 @@ import { RECENT_DISPUTES_QUERY } from '../queries/disputes'
 import { TOP_STAKE_JURORS_QUERY } from '../queries/jurors'
 
 const HomePage = () => {
-  const { loadingDisputes, errorDisputes, data: { disputes } = {} } = useSubscription(RECENT_DISPUTES_QUERY)
-  const { loadingJurors, errorJurors, data: { jurors } = {} } = useSubscription(TOP_STAKE_JURORS_QUERY)
+  const { loadingDisputes, errorDisputes, data: { disputes } = {} } = useQuery(RECENT_DISPUTES_QUERY)
+  const { loadingJurors, errorJurors, data: { jurors } = {} } = useQuery(TOP_STAKE_JURORS_QUERY)
 
   if (loadingDisputes || loadingJurors) {
     return (
