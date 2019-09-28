@@ -16,10 +16,12 @@ const DisputeTable = ({ data }) =>
           <th>ID</th>
           <th>Court</th>
           <th>Owner</th>
-          <th>Period</th>
+          <th>Choices</th>
+          <th>Votes</th>
+          <th>Status</th>
+          <th>Status Changed</th>
           <th>Created</th>
           <th>Last Modified</th>
-          <th>Status</th>
         </tr>
       </thead>
       <tbody>
@@ -31,7 +33,7 @@ const DisputeTable = ({ data }) =>
               </Link>
             </td>
             <td>
-              <Link to={`/court/${dispute.court.id}`} title={`View details of court #${dispute.id}`}>
+              <Link to={`/court/${dispute.court.id}`} title={`View details of ${dispute.court.name}`}>
                 <span>{dispute.court.name}</span>
               </Link>
             </td>
@@ -41,16 +43,22 @@ const DisputeTable = ({ data }) =>
               </Link>
             </td>
             <td>
+              <span>{dispute.numberOfChoices}</span>
+            </td>
+            <td>
+              <span>{dispute.voteCount}</span>
+            </td>
+            <td>
               <Period value={dispute.period} />
+            </td>
+            <td>
+              <Timestamp value={dispute.lastPeriodChange} addSuffix={true} />
             </td>
             <td>
               <Timestamp value={dispute.created} addSuffix={true} />
             </td>
             <td>
               <Timestamp value={dispute.modified} addSuffix={true} />
-            </td>
-            <td>
-              <span>-</span>
             </td>
           </tr>
         ))}
