@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Redirect, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Redirect, Route, Switch, Link, NavLink } from 'react-router-dom'
 import { ApolloProvider } from '@apollo/react-hooks'
 import styled from 'styled-components'
 
@@ -32,13 +32,13 @@ const Root = () => (
               </Link>
               <Menu>
                 <Item>
-                  <Link to='/courts'>Courts</Link>
+                  <NavLink to='/courts'>Courts</NavLink>
                 </Item>
                 <Item>
-                  <Link to='/disputes'>Disputes</Link>
+                  <NavLink to='/disputes'>Disputes</NavLink>
                 </Item>
                 <Item>
-                  <Link to='/jurors'>Jurors</Link>
+                  <NavLink to='/jurors'>Jurors</NavLink>
                 </Item>
               </Menu>
             </Container>
@@ -143,6 +143,7 @@ const Header = styled.header`
 
 const Title = styled.h1`
   display: inline-block;
+  min-width: 300px;
   margin: 0;
   padding: 0;
   font-size: 1.2rem;
@@ -155,11 +156,16 @@ export const Menu = styled.ul`
   display: grid;
   grid-auto-flow: column;
   grid-column-gap: var(--spacing-wide);
+  min-width: 300px;
   list-style: none;
 `
 
 export const Item = styled.li`
   font-weight: bold;
+
+  a.active {
+    border-bottom: 2px solid var(--border-color);
+  }
 `
 
 const Footer = styled.footer`
