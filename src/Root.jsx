@@ -10,7 +10,7 @@ import GlobalStylesheet from './GlobalStylesheet'
 import Branding from './components/Branding'
 
 import HomePage from './pages/HomePage'
-import CourtDetail from './pages/courts/CourtDetail'
+// import CourtDetail from './pages/courts/CourtDetail'
 import CourtList from './pages/courts/CourtList'
 import DisputeDetail from './pages/disputes/DisputeDetail'
 import DisputeList from './pages/disputes/DisputeList'

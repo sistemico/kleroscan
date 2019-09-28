@@ -22,6 +22,16 @@ const CourtTable = ({ data: rootCourt }) => {
     }, 0)
   }, [courts])
 
+  const totalStakes = useMemo(() => {
+    return courts.reduce((total, { stakes }) => {
+      if (stakes) {
+        total += stakes.length
+      }
+
+      return total
+    }, 0)
+  }, [courts])
+
   return !courts.length ? (
     <Message>No courts to show</Message>
   ) : (
@@ -32,9 +42,10 @@ const CourtTable = ({ data: rootCourt }) => {
             <th>ID</th>
             <th>Name</th>
             <th>Disputes</th>
+            <th>Stakes</th>
             <th>Min Stake</th>
-            <th>Fee for Juror</th>
-            <th>Alpha</th>
+            <th>Arbitration Fee</th>
+            <th>Hidden Votes</th>
           </tr>
         </thead>
         <tbody>
@@ -54,22 +65,26 @@ const CourtTable = ({ data: rootCourt }) => {
                 <span>{court.disputeCount}</span>
               </td>
               <td>
+                <span>{(court.stakes && court.stakes.length) || 0}</span>
+              </td>
+              <td>
                 <span>{court.minStake}</span>
               </td>
               <td>
                 <span>{court.feeForJuror}</span>
               </td>
               <td>
-                <span>{court.alpha}</span>
+                <span>{court.hiddenVotes ? 'Yes' : 'No'}</span>
               </td>
             </tr>
           ))}
         </tbody>
         <tfoot>
           <tr>
-            <td colSpan={2}>Total disputes</td>
+            <td colSpan={2} />
             <td>{totalDisputes}</td>
-            <td colSpan={3} />
+            <td>{totalStakes}</td>
+            <td colSpan={2} />
           </tr>
         </tfoot>
       </table>

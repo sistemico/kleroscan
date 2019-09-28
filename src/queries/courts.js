@@ -37,5 +37,8 @@ export const ALL_COURTS_QUERY = gql`
     alpha
     feeForJuror
     disputeCount
+    stakes(first: 1000) {
+      id
+    }
   }
 `
