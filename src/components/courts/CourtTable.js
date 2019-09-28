@@ -52,14 +52,14 @@ const CourtTable = ({ data: rootCourt }) => {
           {courts.map(court => (
             <tr key={`court-${court.id}`}>
               <td>
-                <Link to={`/court/${court.id}`} title={`View details of ${court.name}`}>
-                  <Pill>{court.id}</Pill>
-                </Link>
+                {/*<Link to={`/court/${court.id}`} title={`View details of ${court.name}`}>*/}
+                <Pill>{court.id}</Pill>
+                {/*</Link>*/}
               </td>
               <td>
-                <Link to={`/court/${court.id}`} title={`View details of ${court.name}`}>
-                  {'—'.repeat(court.level)} {court.name}
-                </Link>
+                {/*<Link to={`/court/${court.id}`} title={`View details of ${court.name}`}>*/}
+                {'—'.repeat(court.level)} {court.name}
+                {/*</Link>*/}
               </td>
               <td>
                 <span>{court.disputeCount}</span>

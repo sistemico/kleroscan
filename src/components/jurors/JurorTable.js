@@ -21,9 +21,9 @@ const JurorTable = ({ data }) =>
         {data.map(juror => (
           <tr key={`juror-${juror.address}`}>
             <td>
-              <Link to={`/jurors/${juror.address}`} title={`View details of juror #${juror.address}`}>
-                <span>{juror.address}</span>
-              </Link>
+              {/*<Link to={`/jurors/${juror.address}`} title={`View details of juror #${juror.address}`}>*/}
+              <span>{juror.address}</span>
+              {/*</Link>*/}
             </td>
             <td>
               <span>{juror.stakedTokens} PNK</span>

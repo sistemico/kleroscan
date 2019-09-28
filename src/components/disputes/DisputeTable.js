@@ -27,19 +27,19 @@ const DisputeTable = ({ data }) =>
         {data.map(dispute => (
           <tr key={`dispute-${dispute.id}`}>
             <td>
-              <Link to={`/dispute/${dispute.id}`} title={`View details of dispute #${dispute.id}`}>
-                <Pill>{dispute.id}</Pill>
-              </Link>
+              {/*<Link to={`/dispute/${dispute.id}`} title={`View details of dispute #${dispute.id}`}>*/}
+              <Pill>{dispute.id}</Pill>
+              {/*</Link>*/}
             </td>
             <td>
-              <Link to={`/court/${dispute.court.id}`} title={`View details of ${dispute.court.name}`}>
-                <span>{dispute.court.name}</span>
-              </Link>
+              {/*<Link to={`/court/${dispute.court.id}`} title={`View details of ${dispute.court.name}`}>*/}
+              <span>{dispute.court.name}</span>
+              {/*</Link>*/}
             </td>
             <td>
-              <Link to={`/juror/${dispute.owner}`}>
-                <span>{dispute.owner}</span>
-              </Link>
+              {/*<Link to={`/juror/${dispute.owner}`}>*/}
+              <span>{dispute.owner}</span>
+              {/*</Link>*/}
             </td>
             <td>
               <span>{dispute.numberOfChoices}</span>
